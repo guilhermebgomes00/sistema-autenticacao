@@ -37,9 +37,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// =========================
-// CADASTRO
-// =========================
+// Cadastro
 
 app.post("/cadastro", async (req, res) => {
   const { nome, email, senha } = req.body;
@@ -72,9 +70,7 @@ app.post("/cadastro", async (req, res) => {
   });
 });
 
-// =========================
-// LOGIN
-// =========================
+// Login
 
 app.post("/login", async (req, res) => {
   const { email, senha } = req.body;
@@ -131,9 +127,7 @@ app.post("/login", async (req, res) => {
   });
 });
 
-// =========================
-// PERFIL / VALIDAR TOKEN
-// =========================
+// Perfil / validar token
 
 app.get("/perfil", (req, res) => {
   const cabecalho = req.headers.authorization;
@@ -186,9 +180,7 @@ app.get("/perfil", (req, res) => {
   }
 });
 
-// =========================
-// INICIAR SERVIDOR
-// =========================
+// Iniciar servidor
 
 app.listen(3000, () => {
   console.log("Servidor rodando em http://localhost:3000");
